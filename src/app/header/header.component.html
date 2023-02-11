@@ -1,0 +1,51 @@
+<div class="toolbar">
+    <img width="40" alt="Angular Logo" src="favicon.ico" />
+    <h1 class="logo" routerLink="">MyKart</h1>
+    <div *ngIf="menuType!=='seller'" class="nav-search">
+        <input type="text"
+        #searchInput
+        (keyup)="searchProducts($event)" (blur)="hideSearch()" placeholder="What would like to order">
+        <button (click)="submitSearch(searchInput.value)">Search</button>
+        <ul class="suggested-search" *ngIf="searchResult">
+            <li *ngFor="let item of searchResult">
+                <a (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div [ngSwitch]="menuType">
+        <ul *ngSwitchCase="'default'">
+            <li><a routerLink="seller-auth">Seller</a></li>
+            <li><a routerLink="user-auth">Login</a></li>
+            <li><button type="button" class="btn btn-primary">
+                Cart <span class="badge badge-light">({{cartCount}})</span>
+                <span class="sr-only"></span>
+              </button>
+            </li>
+        </ul>
+        <ul *ngSwitchCase="'seller'">
+            <li><a routerLink="/seller-home">List</a></li>
+            <li><a routerLink="/seller-add-product">Add Product</a></li>
+            <li><a (click)="logout()" style="cursor: pointer;">Logout</a></li>
+            <li><a routerLink="#">{{sellerName | titlecase}}</a></li>
+        </ul>
+        <ul *ngSwitchCase="'user'">
+            <li><a routerLink="">Wishlist</a></li>
+            <li><a routerLink="my-orders">My Order</a></li>
+            <li>
+                <a [routerLink]="cartCount>0?'cart-page':null">
+                    <button type="button" class="btn btn-success position-relative">
+                    Cart
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      ({{cartCount}})
+                      <span class="visually-hidden">cart items</span>
+                    </span>
+                  </button>
+                </a>
+            </li>
+            <li><a routerLink="user-auth">{{userName | titlecase}}</a></li>
+            <li><a (click)="userlogout()">Logout</a></li>
+        </ul>
+    </div>
+</div>
+<div class="toolbar-line">
+</div>

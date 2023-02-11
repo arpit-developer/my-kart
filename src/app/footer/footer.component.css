@@ -1,0 +1,26 @@
+ul{
+    margin: 0;
+    padding: 0;
+}
+.footer {
+    position: fixed;
+    background-color: #1abc9c;
+    color: white;
+    line-height: 20px;
+    padding: 0 20px;
+    margin: 5px 0px -10px 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 15px;
+    /* background-color: #00000082; */
+}
+.footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.footer ul li a{
+    color: #fff;
+    text-decoration: none;
+}

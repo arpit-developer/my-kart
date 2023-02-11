@@ -1,0 +1,204 @@
+{
+  "seller": [
+    {
+      "name": "Arpit bhatnagar",
+      "email": "abc@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "Arpit Gupta",
+      "email": "ab@gmail.com",
+      "password": "ab@12345",
+      "id": 2
+    },
+    {
+      "name": "Shivanshu",
+      "email": "bngshivanshu@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "Dilip",
+      "email": "dipu@g.com",
+      "password": "1243",
+      "id": 5
+    },
+    {
+      "name": "kajol",
+      "email": "jol@gmail.com",
+      "password": "23234",
+      "id": 6
+    },
+    {
+      "name": "deexu",
+      "email": "dee94@gmail.com",
+      "password": "abc@123",
+      "id": 7
+    },
+    {
+      "name": "Nishi",
+      "email": "nish@g.com",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "observe": "response",
+      "id": 12
+    }
+  ],
+  "products": [
+    {
+      "name": "realme GT Neo 2 5G",
+      "price": "32000",
+      "color": "green",
+      "category": "Smartphone",
+      "description": "op gaming performance",
+      "image": "https://image01.realme.net/general/20211008/1633694227602.png",
+      "id": 1
+    },
+    {
+      "name": "iPhone14",
+      "price": "120000",
+      "color": "black",
+      "category": "mobile",
+      "description": "op mobile",
+      "image": "https://m.media-amazon.com/images/I/61XO4bORHUL._SL1500_.jpg",
+      "id": 2
+    },
+    {
+      "name": "iPhone13 Pro Max",
+      "price": "95000",
+      "color": "Pink",
+      "category": "mobile",
+      "description": "op mobile",
+      "image": "https://www.jiomart.com/images/product/420x420/491997703/apple-iphone-13-128-gb-pink-digital-o491997703-p590798557-0-202208221207.jpeg",
+      "id": 3
+    },
+    {
+      "name": "Asus max pro M2",
+      "price": "15000",
+      "color": "blue",
+      "category": "Mobile",
+      "description": "average phone",
+      "image": "https://m.media-amazon.com/images/I/51FTxOUGG5L._AC_.jpg",
+      "id": 6
+    },
+    {
+      "name": "MacBook Air 2",
+      "price": "250000",
+      "color": "white",
+      "category": "Laptop",
+      "description": "Best in business laptop",
+      "image": "https://m.media-amazon.com/images/I/71dEwu0xZtL._SL1500_.jpg",
+      "id": 7
+    },
+    {
+      "name": "Noise Colorfit Pro 2",
+      "price": "2500",
+      "color": "black",
+      "category": "Smartwatch",
+      "description": "Smartwatch with limited ability.",
+      "image": "https://rukminim1.flixcart.com/image/416/416/k5vcya80pkrrdj/smartwatch/h/9/n/l-size-fitness-activity-tracker-colored-display-with-pedometer-original-imafhjzcatnmjm3t.jpeg?q=70",
+      "id": 8
+    },
+    {
+      "name": "Samsung S23 Ultra",
+      "price": "125000",
+      "color": "gray",
+      "category": "Smartphone",
+      "description": "The Best Smartphone in current times",
+      "image": "https://www.smartprix.com/bytes/wp-content/uploads/2022/09/GALAXY-S23-ULTRA-5K2-scaled.jpg",
+      "id": 9
+    },
+    {
+      "name": "Lenovo v115isk",
+      "price": "42000",
+      "color": "Black matte",
+      "category": "laptop",
+      "description": "Good perfromance in 2018",
+      "image": "https://m.media-amazon.com/images/I/61YlPllGZQL._SL1500_.jpg",
+      "id": 10
+    },
+    {
+      "name": "Men Tshirt",
+      "price": "799",
+      "color": "Blue",
+      "category": "Men Clothing",
+      "description": "xyz",
+      "image": "https://m.media-amazon.com/images/I/71O1QaI-sbL._UY550_.jpg",
+      "id": 11
+    },
+    {
+      "name": "Addidas Shoes",
+      "price": "1999",
+      "color": "Off Black",
+      "category": "Shoes",
+      "description": "Best",
+      "image": "https://rukminim1.flixcart.com/image/832/832/jxgflow0/shoe/v/g/c/menscasual-101-9-kircom-black-original-imafhgg6vsvzw2za.jpeg?q=70",
+      "id": 12
+    },
+    {
+      "name": "iPhone 12 Mini",
+      "price": "49999",
+      "color": "red",
+      "category": "Smartphone",
+      "description": "best Short mobile",
+      "image": "https://media.croma.com/image/upload/v1662425819/Croma%20Assets/Communication/Mobiles/Images/229936_shx8xa.png",
+      "id": 13
+    }
+  ],
+  "users": [
+    {
+      "name": "arpit",
+      "email": "ab@g.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "Sumit",
+      "email": "s@g.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "Sachin",
+      "email": "sachin@virat.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "raj",
+      "email": "raj@user.com",
+      "password": "123",
+      "id": 5
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "email": "arpitbhatnagar55@gmail.com",
+      "address": "271/170 LUKERGANJ NEAR MADNANI HOSPITAL",
+      "contact": "9554046078",
+      "totalPrice": 120100,
+      "userId": 5,
+      "id": 8
+    },
+    {
+      "email": "arpitbhatnagar55@gmail.com",
+      "address": "271/170 LUKERGANJ NEAR MADNANI HOSPITAL",
+      "contact": "9554046078",
+      "totalPrice": 120100,
+      "userId": 5,
+      "id": 9
+    },
+    {
+      "email": "arpitbhatnagar55@gmail.com",
+      "address": "271/170 LUKERGANJ NEAR MADNANI HOSPITAL",
+      "contact": "9554046078",
+      "totalPrice": 95100,
+      "userId": 2,
+      "id": 10
+    }
+  ]
+}
