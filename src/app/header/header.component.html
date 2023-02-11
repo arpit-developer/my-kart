@@ -29,7 +29,7 @@
             <li><a routerLink="#">{{sellerName | titlecase}}</a></li>
         </ul>
         <ul *ngSwitchCase="'user'">
-            <li><a routerLink="">Wishlist</a></li>
+            <li><a routerLink="wishlist">Wishlist</a></li>
             <li><a routerLink="my-orders">My Order</a></li>
             <li>
                 <a [routerLink]="cartCount>0?'cart-page':null">

@@ -12,6 +12,7 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
   {
@@ -60,6 +61,10 @@ const routes: Routes = [
   {
     path:'my-orders',
     component:MyOrdersComponent
+  },
+  {
+    path:'wishlist',
+    component:WishlistComponent
   }
 ];
 
