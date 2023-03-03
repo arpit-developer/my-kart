@@ -1,4 +1,4 @@
-<div class="toolbar">
+<!-- <div class="toolbar">
     <img width="40" alt="Angular Logo" src="favicon.ico" />
     <h1 class="logo" routerLink="">MyKart</h1>
     <div *ngIf="menuType!=='seller'" class="nav-search">
@@ -36,16 +36,104 @@
                     <button type="button" class="btn btn-success position-relative">
                     Cart
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      ({{cartCount}})
+                      {{cartCount}}
                       <span class="visually-hidden">cart items</span>
                     </span>
                   </button>
                 </a>
             </li>
-            <li><a routerLink="user-auth">{{userName | titlecase}}</a></li>
+            
+            <li><a routerLink="user-auth" data-bs-toggle="dropdown" >{{userName | titlecase}}</a></li>
             <li><a (click)="userlogout()">Logout</a></li>
         </ul>
     </div>
-</div>
-<div class="toolbar-line">
-</div>
+</div> -->
+<!-- <div class="toolbar-line">
+</div> -->
+
+
+
+<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">
+      <img src="https://cdn-icons-png.flaticon.com/512/2331/2331966.png" alt="Bootstrap" width="35" height="32"
+        class="d-inline-block align-text-top">
+      MyKart
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-lg-0" *ngIf="menuType!=='seller'" style="flex:1; display: flow-root;">
+          <form class="d-flex" role="search">
+            <input type="search"
+            class="form-control me-2"
+            #searchInput
+            (keyup)="searchProducts($event)"
+            (blur)="hideSearch()"
+            placeholder="What would like to order"
+            aria-label="Search">
+            <button class="btn btn-outline-success" (click)="submitSearch(searchInput.value)">Search</button>
+            <ul class="list-group" *ngIf="searchResult" style="position: absolute;top: 50px;width: auto;cursor: pointer;">
+              <li class="list-group-item list-group-item-primary" *ngFor="let item of searchResult">
+                <a (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
+              </li>
+            </ul>
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button> -->
+          </form>
+        </ul>
+      <div [ngSwitch]="menuType">
+        <ul class="navbar-nav justify-content-end" *ngSwitchCase="'default'">
+          <li class="nav-item"><a class="nav-link" routerLink="seller-auth">Seller</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="user-auth">Login</a></li>
+          <li class="nav-item"><button type="button" class="btn btn-primary">
+              Cart <span class="badge badge-light">({{cartCount}})</span>
+              <span class="sr-only"></span>
+            </button>
+          </li>
+        </ul>
+        <ul class="navbar-nav me-auto mb-lg-0">
+        <ul class="navbar-nav justify-content-end" *ngSwitchCase="'seller'">
+          <li class="nav-item"><a class="nav-link" routerLink="/seller-home">List</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/seller-add-product">Add Product</a></li>
+          <li class="nav-item"><a class="nav-link" (click)="logout()" style="cursor: pointer;">Logout</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="#">{{sellerName | titlecase}}</a></li>
+        </ul>
+        </ul>
+        <ul class="navbar-nav justify-content-end" *ngSwitchCase="'user'">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="my-orders">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="wishlist">Wishlist</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="cartCount>0?'cart-page':null">
+              <button type="button" class="btn btn-primary position-relative">
+                Cart
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{cartCount}}
+                  <span class="visually-hidden">cart items</span>
+                </span>
+              </button>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{userName | titlecase}}
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" (click)="userlogout()">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

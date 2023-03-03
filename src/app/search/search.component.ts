@@ -25,6 +25,6 @@ export class SearchComponent implements OnInit {
         this.showSearchResult = true;
       }
     })
-    // this.route.navigate([`search/`]);
+    // this.route.navigate(['search/']);
   }
 }

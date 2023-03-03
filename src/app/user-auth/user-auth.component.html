@@ -3,8 +3,8 @@
         <h1>User Signup</h1>
         <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
             <input type="text" class="form-input" name="name" placeholder="Enter User Name" ngModel #name="ngModel" required/>
-            <input type="text" class="form-input" name="email" placeholder="Enter User Email" ngModel /><input
-                type="password" class="form-input" name="password" placeholder="Enter User Password" ngModel />
+            <input type="text" class="form-input" name="email" placeholder="Enter User Email" ngModel required/>
+            <input type="password" class="form-input" name="password" placeholder="Enter User Password" ngModel required/>
             <button class="form-button">Sign Up</button>
             <a class="auth-toggle"> Already Have Account ? <a (click)="openLogin()">Click Here</a></a>
         </form>
@@ -18,7 +18,7 @@
             <p class="invalid-input">
                 <span *ngIf="email.invalid && email.touched ">Please enter valid input</span>
             </p>
-            <input type="password" class="form-input" name="password" placeholder="Enter User Password" 
+            <input type="password" class="form-input" name="password" placeholder="Enter User Password"
             ngModel minlength="2" maxlength="20" #password="ngModel" required />
             <p class="invalid-input">
                 <span *ngIf="password.invalid && password.touched ">Please enter valid input</span>

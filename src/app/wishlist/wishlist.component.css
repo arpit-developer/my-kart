@@ -1,0 +1,19 @@
+.wishlist{
+    margin-bottom: 100px;
+}
+.wishlist h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.wishlist .order-img{
+    width: 100px;
+}
+
+.wishlist .row{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom:1px solid #ddd;
+
+}

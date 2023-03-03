@@ -14,6 +14,8 @@
   .toolbar img {
     margin: 0 16px;
   } */
+  .dropdown-menu{
+    --bs-dropdown-min-width: 5rem;}
 .toolbar {
     position: absolute;
     top: 0;
@@ -79,13 +81,15 @@
 }
 
 .suggested-search{
+    list-style-type: none;
     position: absolute;
-    top: 40px;
+    top: 50px;
     z-index: 10;
-    display: list-item !important;
-    border: 1px solid #ddd;
+    border-radius: 10px;
+    /* display: list-item !important; */
+    /* border: 1px solid #ddd; */
     background-color: #fff;
-    width: 300px;
+    width: auto;
   }
   .suggested-search li {
     padding:5px;

@@ -1,5 +1,3 @@
-<br><br>
-
 <div class="row product-details" *ngIf="productData">
     <div class="col-sm-7">
         <img class="product-image" src="{{productData.image}}" />
@@ -18,12 +16,40 @@
                 <button (click)="handleQuantity('max')">+</button>
             </div>
             <div class="row" style="margin-top: 10px;">
-            <li class="col col-4-12" style="list-style-type: none"><button type="button" class="btn btn-warning">Buy Now</button></li>
-            <li class="col col-4-12" style="list-style-type: none"><button *ngIf="!removeCart" type="button" class="btn btn-warning" (click)="AddtoCart()">Add to
-                    Cart</button></li>
-            <a class="col col-4-12" style="list-style-type: none"><button *ngIf="removeCart" type="button" class="btn btn-warning"
-                    (click)="RemovetoCart(productData.id)">Remove from Cart</button></a>
+
+                <button type="button" class="btn btn-warning" style="margin-bottom: 10px;">Buy Now</button>
+
+                <button *ngIf="!removeCart" type="button" class="btn btn-warning" (click)="AddtoCart()">Add to
+                    Cart</button>
+
+                <button *ngIf="removeCart" type="button" class="btn btn-warning"
+                    (click)="RemovetoCart(productData.id)">Remove from Cart</button>
+
             </div>
         </div>
     </div>
 </div>
+
+<!-- <div class="row product-details" *ngIf="productData">
+    <div class="col-sm-6">
+    <img  class="product-img" src="{{productData.image}}" alt="">
+    </div>
+    <div class="col-sm-6">
+        <div class="details">
+            <h1>{{productData.name}}</h1>
+            <h3>Price : {{productData.price}}</h3>
+            <div>Color :<h3 [style.backgroundColor]="productData.color" class="product-color"></h3></div>
+            <h6>Category : {{productData.category}}</h6>
+            <h6>Description : {{productData.description}}</h6>
+            <div class="quantity-group">
+                <button (click)="handleQuantity('min')" >-</button>
+                <input type="text" value="{{productQuantity}}" />
+                <button (click)="handleQuantity('plus')">+</button>
+            </div>
+            <button class="btn btn-outline-warning">Buy Now</button>
+            <button *ngIf="removeCart" class="btn btn-outline-warning" (click)=" RemovetoCart(productData.id)">Remove to Cart</button>
+            <button *ngIf="!removeCart" class="btn btn-outline-warning" (click)="AddtoCart()">Add to Cart</button>
+            
+        </div>
+    </div>
+    </div> -->

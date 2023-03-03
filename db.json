@@ -45,6 +45,12 @@
     {
       "observe": "response",
       "id": 12
+    },
+    {
+      "name": "Dilip Singh",
+      "email": "d@g.com",
+      "password": "123",
+      "id": 13
     }
   ],
   "products": [
@@ -146,6 +152,15 @@
       "description": "best Short mobile",
       "image": "https://media.croma.com/image/upload/v1662425819/Croma%20Assets/Communication/Mobiles/Images/229936_shx8xa.png",
       "id": 13
+    },
+    {
+      "name": "Water Steel Bottle",
+      "price": "999",
+      "color": "Silver",
+      "category": "Bottle",
+      "description": "good to long duration",
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/41z2cX46mOL._SL1500_.jpg",
+      "id": 14
     }
   ],
   "users": [
@@ -174,7 +189,32 @@
       "id": 5
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "name": "iPhone13 Pro Max",
+      "price": "95000",
+      "color": "Pink",
+      "category": "mobile",
+      "description": "op mobile",
+      "image": "https://www.jiomart.com/images/product/420x420/491997703/apple-iphone-13-128-gb-pink-digital-o491997703-p590798557-0-202208221207.jpeg",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 3,
+      "id": 2
+    },
+    {
+      "name": "Water Steel Bottle",
+      "price": "999",
+      "color": "Silver",
+      "category": "Bottle",
+      "description": "good to long duration",
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/41z2cX46mOL._SL1500_.jpg",
+      "quantity": 1,
+      "userId": 2,
+      "productId": 14,
+      "id": 5
+    }
+  ],
   "orders": [
     {
       "email": "arpitbhatnagar55@gmail.com",

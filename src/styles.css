@@ -5,11 +5,6 @@ body{
 .logo{
     cursor: pointer;
 }
-.container{
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-}
 .common-form{
     text-align: center;
     display: flex;
